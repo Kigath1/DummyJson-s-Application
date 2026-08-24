@@ -1,12 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+
+    <!-- Base dark theme -->
     <style name="Base.Theme.XmlApplication" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <!-- Dark mode colors -->
+        <item name="colorPrimary">@color/brand_primary</item>
+        <item name="colorPrimaryVariant">@color/brand_primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/brand_secondary</item>
+        <item name="colorSecondaryVariant">@color/brand_secondary</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- Status Bar - Dark -->
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Navigation Bar - Dark -->
+        <item name="android:navigationBarColor">@color/black</item>
+
+        <!-- Window Background - Dark -->
+        <item name="android:windowBackground">@color/black</item>
     </style>
 
-    <style name="ThemeOverlay.XmlApplication.FullscreenContainer" parent="">
-        <item name="fullscreenBackgroundColor">@color/light_blue_900</item>
-        <item name="fullscreenTextColor">@color/light_blue_A400</item>
+    <!-- Application dark theme -->
+    <style name="Theme.XmlApplication" parent="Base.Theme.XmlApplication">
+        <!-- Any dark mode overrides -->
     </style>
+
 </resources>

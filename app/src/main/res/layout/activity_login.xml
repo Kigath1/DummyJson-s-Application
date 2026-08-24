@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/img_background"
     android:fitsSystemWindows="true"
-    tools:context=".LoginActivity">
+    tools:context=".auth.LoginActivity">
 
     <!-- Fixed Top Section - App Name & Tagline -->
     <LinearLayout

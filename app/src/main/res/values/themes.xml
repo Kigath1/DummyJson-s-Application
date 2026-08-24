@@ -1,14 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+
+    <!-- Base application theme -->
     <style name="Base.Theme.XmlApplication" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Customize your light theme here -->
+        <item name="colorPrimary">@color/brand_primary</item>
+        <item name="colorPrimaryVariant">@color/brand_primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/brand_secondary</item>
+        <item name="colorSecondaryVariant">@color/brand_secondary</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- Status Bar -->
+        <item name="android:statusBarColor">@color/brand_primary_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Navigation Bar -->
+        <item name="android:navigationBarColor">@color/brand_primary_dark</item>
+
+        <!-- Window Background -->
+        <item name="android:windowBackground">@color/white</item>
     </style>
 
-    <style name="Theme.XmlApplication" parent="Base.Theme.XmlApplication" />
-
-    <style name="ThemeOverlay.XmlApplication.FullscreenContainer" parent="">
-        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
-        <item name="fullscreenTextColor">@color/light_blue_A200</item>
+    <!-- Application theme (extends base) -->
+    <style name="Theme.XmlApplication" parent="Base.Theme.XmlApplication">
+        <!-- Any overrides for the main app can go here -->
     </style>
+
+    <!-- Optional: Transparent Status Bar Variant -->
+    <style name="Theme.XmlApplication.Transparent" parent="Theme.XmlApplication">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!-- Optional: Full Screen Theme -->
+    <style name="Theme.XmlApplication.FullScreen" parent="Theme.XmlApplication">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
 </resources>

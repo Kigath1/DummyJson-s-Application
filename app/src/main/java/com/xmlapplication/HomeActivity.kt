@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import com.bumptech.glide.Glide
+import com.xmlapplication.auth.LoginActivity
 import com.xmlapplication.auth.viewmodel.AuthUIState
 import com.xmlapplication.auth.viewmodel.AuthViewModel
 import com.xmlapplication.core.di.AppContainer
@@ -42,10 +44,10 @@ class HomeActivity : AppCompatActivity() {
                     when (state) {
                         is AuthUIState.Success -> {
                             binding.tvWelcome.text = "Welcome, ${state.user.firstName}"
-//                            Glide.with(this@HomeActivity)
-//                                .load(state.user.image)
-//                                .circleCrop()
-//                                .into(binding.ivAvatar)
+                            Glide.with(this@HomeActivity)
+                                .load(state.user.image)
+                                .circleCrop()
+                                .into(binding.ivAvatar)
                         }
                         is AuthUIState.Error -> {
                             // Token likely invalid/expired beyond refresh — bounce to login.

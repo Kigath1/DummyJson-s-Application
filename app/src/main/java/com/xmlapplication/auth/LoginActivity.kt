@@ -1,11 +1,13 @@
-package com.xmlapplication
+package com.xmlapplication.auth
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import androidx.lifecycle.Lifecycle
+import com.xmlapplication.HomeActivity
 import com.xmlapplication.auth.viewmodel.AuthUIState
 import com.xmlapplication.auth.viewmodel.AuthViewModel
 import com.xmlapplication.core.di.AppContainer
@@ -76,14 +78,14 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun setLoading(isLoading: Boolean) {
-        binding.progressBar.visibility = if (isLoading) android.view.View.VISIBLE else android.view.View.GONE
+        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
         binding.btnLogin.isEnabled = !isLoading
-        if (isLoading) binding.tvError.visibility = android.view.View.GONE
+        if (isLoading) binding.tvError.visibility = View.GONE
     }
 
     private fun showError(message: String) {
         binding.tvError.text = message
-        binding.tvError.visibility = android.view.View.VISIBLE
+        binding.tvError.visibility = View.VISIBLE
     }
 
     private fun navigateToHome() {
