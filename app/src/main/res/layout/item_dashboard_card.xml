@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="1dp"
+    app:cardBackgroundColor="@color/md_surface"
+    app:strokeColor="@color/md_surface_variant"
+    app:strokeWidth="1dp"
+    tools:context=".features.dashboard.ItemDashboardCard"
+
+    >
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:background="@drawable/bg_icon_chip"
+            tools:src="@drawable/ic_inventory"
+            android:contentDescription="Category icon"
+            xmlns:tools="http://schemas.android.com/tools" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/md_on_surface"
+            tools:text="Products" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="13sp"
+        android:textColor="@color/md_on_surface_variant"
+        android:maxLines="2"
+        tools:text="Browse products and product information" />
+
+    <TextView
+        android:id="@+id/tvEndpointTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_tag_chip"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        android:fontFamily="monospace"
+        android:textSize="11sp"
+        android:textColor="@color/md_on_surface_variant"
+        tools:text="/products" />
+
+</LinearLayout>
+
+</androidx.cardview.widget.CardView>
