@@ -73,6 +73,10 @@ dependencies {
     // glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
+    // navigation
+    implementation("androidx.navigation:navigation-fragment-ktx:2.9.3")
+    implementation("androidx.navigation:navigation-ui-ktx:2.9.3")
+
     //Room
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
